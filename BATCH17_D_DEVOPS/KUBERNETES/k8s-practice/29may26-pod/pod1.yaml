@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: insta-pod
+  labels:
+    app: insta
+    env: production
+
+spec:
+  containers:
+  - name: insta-container
+    image: tomcat    
+
+
