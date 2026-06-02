@@ -1,0 +1,26 @@
+
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: fb-replicaset
+  labels:
+    app: fb-app
+    env: prod
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fb-app
+      env: prod
+  template:
+    metadata:
+      labels:
+        app: fb-app
+        env: prod
+    spec:
+      containers:
+      - name: facebook-container
+        image: devopshubg333/batch17d:tomcat
+        ports:
+        - containerPort: 8081
