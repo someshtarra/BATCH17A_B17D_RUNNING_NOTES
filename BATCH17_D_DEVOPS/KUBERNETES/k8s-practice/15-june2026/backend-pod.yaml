@@ -1,0 +1,15 @@
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: backend-pod
+  labels:
+    app: backend
+spec:
+  nodeName: ip-192-168-48-204.ec2.internal
+  containers:
+  - name: fbpod
+    image: nginx
+    ports:
+    - containerPort: 80
